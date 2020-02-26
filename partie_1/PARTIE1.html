@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>APPLICATION CLIENT</title>
+   <div> <header><h1> BIENVENUE SUR L'APPLICATION CLIENT</h1></header></div>
+    <meta charset="UTF_8">
+    <script src="PARTIE1.js"></script> 
+    <style>
+body {
+	min-height: 100%;
+	width: 100%;
+	padding: 10px;
+	margin: 0 auto;
+	position: relative;
+    
+      
+}
+header{
+    background-color:lightgray;
+    margin-top: -20px;
+    
+}
+h1{
+    text-align: center;
+    text-decoration-color: steelblue;
+    text-decoration-style: double;
+}
+div#formulaire {
+	float: left;
+	width: 45%;
+    background-color: cornflowerblue;
+    margin-top: 10px;
+    border: solid;
+    margin-left: 10px;
+   
+}
+div#tableau {
+	float: right;
+	width: 50%;
+    background-color: cornflowerblue;
+    margin-top: 10px;
+    margin-right: 20px;   
+    border: solid;
+}
+table{
+    border-color: black;
+    border-collapse: collapse;
+    border-style: solid;
+    position: relative;
+  
+
+}
+
+    </style>
+</head>
+<body>
+    <div id="formulaire">
+        <fieldset>
+        <form method="POST" action="PARTIE1.html" id="form">
+            
+                <h2> PANNEAU DE SAISIE</h2>
+                    <label for="nom">Nom de l'employé </label>
+                    <input type="text" name="nom" id="nom" /><br/><br/>
+                       
+                    <label for="categorie"> Catégorie </label>
+                            <select name="categorie" id="categorie">
+                                <option value="a">Categorie A</option>
+                                <option value="b">Categorie B</option>
+                                <option value="b">Categorie C</option>
+                            </select><br/><br/>
+                       
+                    <label for="nbHeure">Nombre d'heure</label>
+                    <input type="number" min="0" max="140" name="nbHeure" id="nbheure" ><br><br>
+               
+                <p> A-t-il effectué des heures supplémentaires?</p>
+                 
+                    <input type="radio" id="oui" name="oui" value="oui" onclick="">
+                    <label for="oui">Oui</label><br><br>
+                    <input type="radio" id="non" name="non" value="non" onclick="" >
+                    <label for="non">Non</label><br><br>
+
+                    <label for="heureSup">Heures supplémentaires </label>
+                    <input type="number" name="heureSup" id="heuresup"><br><br>
+                 
+            <label for="avantage">Avantage </label>
+            <input type="number" name="avantage" id="avantage"><br><br>
+            <button type="button" onclick="Afficher();" style="background-color: green;" >Ajouter</button>
+            <button type="reset" onclick="" style="background-color: red;" >Annuler</button>
+                </div>
+            </form> 
+        </fieldset>
+    </div>
+    <div id="tableau">
+    <fieldset>
+     <h2> ENREGISTREMENT</h2>
+            <table border="1"cellspacing="0" id="table">
+                            <tr>
+                                <th>Nom</th>
+                                <th>Salaire</th>
+                                <th>RAS</th>
+                                <th>Salaire Net</th>
+                            </tr>
+            </table> 
+    </fieldset>
+</div><br><br><br>
+    <button type="button" onclick="Imprimer();" style="float: right;
+    ;margin-right: 30px; height: 30px;">Imprimer</button> 
+     
+</body>
+</html>
